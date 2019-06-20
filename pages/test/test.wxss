@@ -1,0 +1,82 @@
+page{
+  background: #f2f2f2;
+ 
+  /* background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554739728653&di=4449cd1ae18b1b7d8a84b5e2d05cb114&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F17a4a112c9ced741f3241ce6e8c5d44eedccd29f3b8a4-b7UtXJ_fw236') */
+  
+}
+.container{
+  margin: 0;
+  padding: 0;
+ 
+}
+.container1{
+  position: fixed;
+  width:100%;
+  z-index: -9999
+}
+.content{
+  border:2px solid #fff;
+  border-radius: 15rpx;
+  width: 94%;
+  margin-bottom: 7%;
+  margin-left:2%;
+  box-shadow: 6rpx 6rpx 3rpx 3rpx #dadad9;
+  display: flex;
+  justify-content: space-between;
+}
+.contenthsabug{
+  border:2px solid #fff;
+  border-radius: 15rpx;
+  width: 94%;
+  margin-top:5%;
+  margin-left:2%;
+  box-shadow: 6rpx 6rpx 3rpx 3rpx #dadad9;
+  display: flex;
+  justify-content: space-between;
+  background: #dadad9;
+}
+.images{
+  width: 200rpx;
+  height: 100rpx;
+  margin-top:30%
+}
+.missionContent{
+  margin-left: 5%;
+  font-size: 16px;
+  width: 80%
+}
+.missionContent .missionTitle{
+  margin:3% 0;
+}
+.missionContent .missionDescription{
+  margin:3% 0%;
+}
+.misssionContent .creatTime{
+  margin: 3% 0%;
+}
+.missionDescription {
+  font-size: 38rpx;
+  line-height: 44rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+/*没有任务*/
+.noneMission{
+  letter-spacing: 35rpx;
+  text-align: center;
+  margin: auto;   
+  display: flex;
+  align-items: center
+}
+/*截止时间*/
+.createTime{
+  margin: 3% 0
+}
+.exectorName{
+  margin: 3% 0
+}
+/* pages/test/test.wxss */

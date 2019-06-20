@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addexector/addexector",
+    "pages/exectorMessage/exectorMessage",
+    "pages/myMission/myMission",
+    "pages/taskCenter/taskCenter",
+    "pages/missionInfo/missionInfo",
+    "pages/test/test",
+    "pages/mymissionUp/mymissionUp",
+    "pages/publishMission/publishMission",
+    "pages/addMission/addMission",
+    "pages/logs/logs",
+    "pages/changePublishMission/changePublishMission"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "yellow",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/missionType.png",
+        "selectedIconPath": "images/index.png"
+      },
+      {
+        "pagePath": "pages/taskCenter/taskCenter",
+        "text": "任务中心",
+        "iconPath": "images/mission1.png",
+        "selectedIconPath": "images/mission2.png"
+      },
+      {
+        "pagePath": "pages/myMission/myMission",
+        "text": "我的",
+        "iconPath": "images/myMission1.png",
+        "selectedIconPath": "images/myMission2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

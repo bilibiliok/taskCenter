@@ -1,0 +1,63 @@
+page{
+  background: linear-gradient(#439efb,#5cc1f6);
+}
+.container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.title text{
+  width: 100%;
+  margin-left: 40%
+}
+/* .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+} */
+/* .userinfoadd{
+  background: #dadad9
+} */
+.footer{
+  border: 5px solid #fff;
+  width: 96%;
+  position: absolute;
+  bottom:0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%
+}
+.missionCenter{
+  margin: 2% 0 2% 5%;
+}
+.missionWay{
+  margin:2% 5% 2% 0;
+}
+/*执行人样式*/
+.exector{
+  color:#000;
+  background: #fff;
+  display: inline-block;
+  margin-top:5%;
+  padding:5%;
+  width:15%;
+  text-align:center;
+  float: left;
+  margin-left: 6%
+}
+.exectoradd{
+  color:#000;
+  background: #dadad9;
+  display: inline-block;
+  margin-top:5%;
+  padding:5%;
+  width:15%;
+  text-align:center;
+  float: left;
+  margin-left: 6%
+}

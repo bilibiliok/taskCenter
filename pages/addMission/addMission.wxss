@@ -1,0 +1,60 @@
+/* pages/addMission/addMission.wxss */
+page{
+  background: #f2f2f2
+}
+.inputTitle,.executor,.chooseTime{
+  /* border: 1px solid blue; */
+  border-radius: 15rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top:5%;
+  background: #fff
+}
+.content{
+  /* border: 1px solid blue; */
+  border-radius: 15rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top:5%;
+  background: #fff
+}
+/* 图片样式 */
+.images{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3%;
+  width:90%
+}
+.addImage button{
+  display: inline-block;
+  margin-left: 38%;
+  margin-top:8%;
+  border: 1px solid blue;
+  border-radius: 15rpx;
+}
+/* 删除图片 */
+.deleteImages{
+  position: absolute;
+  left: 88%;
+  bottom:32%
+}
+/* 执行人 */
+.picker{
+  margin-left: 5%;
+  margin-top:8%;
+  margin-bottom:8%
+}
+.footer-button{
+  /* position: absolute;
+  bottom: 0;
+  width: 100% */
+  margin-top:20%
+}
+/*选择时间*/
+.chooseTime{
+  height:100rpx
+}
+/*标题*/
+.title{
+  height:100rpx
+}

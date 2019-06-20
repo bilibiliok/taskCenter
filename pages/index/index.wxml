@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 头部 -->
+  <view class='title'>
+    <text style='color:white;'>内部工作人员</text>
+    
+  </view>
+  <view class='player'>
+    <view class='userinfo'
+     wx:for="{{exector}}" 
+    wx:key="exector"
+    data-index="{{indexs}}"
+    bindtap='exectorInfo'
+    wx:for-index="indexs">
+    <view class='exector{{indexs==exectorIndex?"add":""}}'>
+      {{item.exectorName}}
+    </view>
+    
+      
+    </view>
+  </view>
+  
+
+  <view class='footer'>
+    <view class='missionCenter'>
+      <text style='color:#fff;font-size'>任务发布中心</text> 
+      <button bindtap='addExector' style='background:#fff;margin:0;margin-top:10rpx;color:#55b7f7'>注册执行人</button>
+    </view>
+    <view class='missionWay'>
+      <text style='color:#fff'>管理员入口</text> 
+      <button catchtap="addMission" style='background:#fff;margin:0;margin-top:10rpx;color:#55b7f7'>我要发布</button>
+    </view>
+  </view>    
+</view>

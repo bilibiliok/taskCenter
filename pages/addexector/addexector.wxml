@@ -1,0 +1,11 @@
+<!--miniprogram/pages/addexector/addexector.wxml-->
+<view class='container'>
+  <input value='{{inputdex}}' class='put' placeholder='请输入姓名' bindinput='addName'></input>
+  <input value='{{inputdex}}' class='put' placeholder='请输入部门'  bindinput='addDepartMent'></input>
+  <input value='{{inputdex}}' class='put' placeholder='请输入职务'  bindinput='addJob'></input>
+  <input type='number' value='{{inputdex}}' class='put' placeholder='请输入电话'  bindinput='addTelephone'></input>
+   <input value='{{inputdex}}' class='put' placeholder='请输入邮箱地址'  bindinput='addEmail'></input>
+
+  
+  <button class='add' type='warn' bindtap='add'>添加执行人</button>
+</view>

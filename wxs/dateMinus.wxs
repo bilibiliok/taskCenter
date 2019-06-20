@@ -1,0 +1,14 @@
+var filter = {
+  dateMinus:function(sDate1, sDate2) {
+    var aDate, oDate1, oDate2, iDays
+    aDate = sDate1.split("-")
+    oDate1 = new Date(parseInt(aDate[0]), parseInt(aDate[1]) - 1, parseInt(aDate[2]));    //创建新的日期对象
+    aDate = sDate2.split("-")
+    oDate2 = new Date(parseInt(aDate[0]), parseInt(aDate[1]) - 1, parseInt(aDate[2]));
+    iDays = parseInt((oDate1 - oDate2) / 1000 / 60 / 60 / 24)    //把相差的毫秒数转换为天数  
+    return iDays
+  },
+}
+module.exports = {
+  dateMinus: filter.dateMinus
+}

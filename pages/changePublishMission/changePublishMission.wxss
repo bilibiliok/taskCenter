@@ -1,0 +1,73 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: #333;
+  line-height: 60rpx;
+}
+.tab {
+  flex: 1;
+  margin:0 5%
+}
+.active {
+  color: blue;
+  border-bottom:1px solid blue;
+  
+}
+
+.container{
+  margin: 0;
+  padding: 0
+}
+.content{
+  border:2px solid #fff;
+  border-radius: 15rpx;
+  width: 94%;
+  margin-top:5%;
+  margin-left:2%;
+  box-shadow: 6rpx 6rpx 3rpx 3rpx #dadad9;
+  display: flex;
+  justify-content: space-between;
+}
+.contenthsabug{
+  border:2px solid #fff;
+  border-radius: 15rpx;
+  width: 94%;
+  margin-top:5%;
+  margin-left:2%;
+  box-shadow: 6rpx 6rpx 3rpx 3rpx #dadad9;
+  display: flex;
+  justify-content: space-between;
+  background: #dadad9;
+}
+.images{
+  width: 200rpx;
+  height: 100rpx;
+  margin: auto
+}
+.missionContent{
+  margin-left: 5%;
+  font-size: 16px;
+  width: 80%
+}
+.missionContent .missionTitle{
+  margin:3% 0;
+}
+.missionContent .missionDescription{
+  margin:3% 0%;
+}
+.misssionContent .creatTime{
+  margin: 3% 0%;
+}
+.missionDescription {
+  font-size: 38rpx;
+  line-height: 44rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+
+

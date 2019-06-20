@@ -1,0 +1,31 @@
+<!--pages/taskCenter/taskCenter.wxml-->
+<view class='container' >
+<image class='container1' mode='widthFix' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554739728653&di=4449cd1ae18b1b7d8a84b5e2d05cb114&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F17a4a112c9ced741f3241ce6e8c5d44eedccd29f3b8a4-b7UtXJ_fw236'></image>
+  <view
+    wx:if="{{topics != []}}"
+    class='content{{indexs == misIndex?"hsabug":""}}'
+    wx:for="{{topics}}" 
+    wx:key="topics"
+    data-index="{{indexs}}"
+    wx:for-index="indexs"
+    bindtap='openMission'
+    >
+      <view class='missionContent'>
+        <view class='missionTitle'>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='missionDescription'>
+          <text>{{item.mainBody}}</text>
+        </view>
+        <view class='createTime'>
+          <text wx:if="{{item.done == 0}}">截止时间：{{item.endTime}}  未接受</text>
+          <text wx:if="{{item.done == 1}}">截止时间：{{item.endTime}}  已接受</text>
+          <text wx:if="{{item.done == 2}}">截止时间：{{item.endTime}}  已完成</text>
+        </view>
+        <view class='exectorName'>
+          <text>执行人: {{item.exectorName}} 检查人：{{item.checkPerson}}</text>
+        </view>  
+      </view>
+  </view>
+</view>
+

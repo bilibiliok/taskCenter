@@ -1,0 +1,44 @@
+<!--pages/addMission/addMission.wxml-->
+<view class='container'>
+  <view class='inputTitle'>
+    <input  class="title" type='text'  maxlength="20" value='{{indexTitle}}' confirm-type='search' placeholder='任务标题' bindinput='inputTitle'></input>
+  </view>
+  <view class='content'>
+    <textarea bindinput='inputmainbody' value='{{indexTitle}}' placeholder='任务内容'  maxlength="200"></textarea>
+  </view>
+  <view class="section">
+    <picker bindchange="bindPickerChange" range-key="{{'exectorName'}}" value="{{bigIndex}}" range="{{exectorList}}">
+      <view class="picker">
+        点击选择执行人：{{exectorList[bigIndex].exectorName}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker bindchange="bindPickerChange2" range-key="{{'exectorName'}}" value="{{smallIndex}}" range="{{checkList}}">
+      <view class="picker">
+        点击选择检查人：{{checkList[smallIndex].exectorName}}
+      </view>
+    </picker>
+  </view>
+ 
+
+  
+  <text style='width:90%;margin-left:5%'>选择截止时间</text>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <input class='chooseTime' disabled='true' value='{{time}}' placeholder='选择时间'/>
+  </picker>
+  <view class='addImage'>
+    <button  wx:if="{{images==''}}"
+    type="default" size="mini" bindtap="chooseImage" 
+>上传图片</button>
+  </view>
+  <view class='images'>
+    <image wx:if="{{images!=''}}" src='{{images}}' mode='widthFix' bindtap='previewImage'></image>
+    <image catchtap='delete' wx:if="{{images!=''}}" class='deleteImages' src='../../images/delete.png' style='width:50rpx;height:50rpx'></image>
+  </view>
+ 
+</view>
+<view class='footer-button'>
+    <button bindtap='addMission' type="warn" >添加任务</button>
+</view>
+<!-- <button bindtap='getOpenid'>测试</button> -->

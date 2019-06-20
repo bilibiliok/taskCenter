@@ -1,0 +1,36 @@
+<!--pages/missionInfo/missionInfo.wxml-->
+<view class='container'>
+  <view class='missionTitle'>
+    <text>{{title}}</text>
+  </view>
+  <view class='allContent'>
+    <view class="images" wx:if="{{images!=''}}">
+    <!-- wx:for="{{images}}" wx:for-item='imgItem' -->
+      <image mode='widthFix'  bindtap='previewImage' src='{{images}}'></image>
+    </view>
+    <!-- <view class='images' wx:elif='{{!images}}'>
+      <image mode='widthFix'  bindtap='previewImage' src='../../none.jpg'></image>
+    </view> -->
+    <view class='content'>
+      <text>{{mainBody}}</text>
+    </view>
+    <view class='exectorPerson'>
+      <text>#任务分配人员#</text>
+      <view class="logo">
+        {{exectorName}}
+      </view>
+    </view>
+    <view class='exectorPerson'>
+      <text>#任务检查人员#</text>
+      <view class="logo">
+        {{checkName}}
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <button type='warn' wx:if="{{done == 0}}" bindtap='getmission'>领取任务</button>
+    <button type='warn' wx:elif="{{done == 1}}" bindtap='checkMission'>检查任务</button>
+    <button type='warn' wx:else>已完成</button>
+    <button bindtap='deleteData'>删除数据</button>
+  </view>
+</view>

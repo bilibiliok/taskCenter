@@ -1,0 +1,10 @@
+/* miniprogram/pages/addexector/addexector.wxss */
+.add{
+  margin-top: 20%;
+  width:80%;
+}
+.put{
+  width:80%;
+  margin-left: 5%;
+  margin-top: 5%;
+}

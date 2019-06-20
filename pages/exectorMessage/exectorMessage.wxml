@@ -1,0 +1,25 @@
+<!--miniprogram/pages/exectorMessage/exectorMessage.wxml-->
+<view class='container'>
+  <image class='container1' mode='widthFix' src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3930382768,3051204574&fm=26&gp=0.jpg'></image>
+  <view class='message'>
+    <view class='title'>
+      <text>个人信息完善</text>
+    </view>
+    <view class='name'>
+      <text>姓名：</text><input value='{{exectorName}}' bindinput='changeName' placeholder='请输入姓名'></input>
+    </view>
+    <view class='name'>
+      <text>部门：</text><input value='{{exectorDepartment}}' bindinput='changeDepartment' placeholder='请输入部门'></input>
+    </view>
+    <view class='name'>
+      <text>职务：</text><input value='{{exectorJob}}' bindinput='changeJob' placeholder='请输入职务'></input>
+    </view>
+    <view class='name'>
+      <text>电话：</text><input type='number' bindinput='changeNumber' value='{{exectorTelephone}}' placeholder='请输入电话'></input>
+    </view>
+    <view class='name'>
+      <text>邮箱：</text><input bindinput='changeEmail' value='{{exectorEmail}}' placeholder='请输入邮箱'></input>
+    </view>
+  </view>
+  <button type='warn' class='change' bindtap='changeMessage'>修改</button>
+</view>

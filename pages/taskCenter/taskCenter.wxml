@@ -1,0 +1,55 @@
+<!--pages/taskCenter/taskCenter.wxml-->
+ <wxs module="func">
+      module.exports = {
+         dateMinus:function(sDate1, sDate2) {
+          var aDate, oDate1, oDate2, iDays
+          aDate = sDate1.split("-")
+          oDate1 = new Date(parseInt(aDate[0]), parseInt(aDate[1]) - 1, parseInt(aDate[2]));    //创建新的日期对象
+          aDate = sDate2.split("-")
+          oDate2 = new Date(parseInt(aDate[0]), parseInt(aDate[1]) - 1, parseInt(aDate[2]));
+          iDays = parseInt((oDate1 - oDate2) / 1000 / 60 / 60 / 24)    //把相差的毫秒数转换为天数  
+          return iDays
+        },
+      }
+</wxs> 
+
+<view class='container' >
+<image class='container1' mode='widthFix' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557165786780&di=e9f3313c00e99ce8887d091804bcb5e7&imgtype=0&src=http%3A%2F%2Fimg18.3lian.com%2Fd%2Ffile%2F201704%2F03%2F730e95dea8584fbaa54bfd395d541f27.jpg'></image>
+  <view
+    wx:if="{{missionList != []}}"
+    class='content{{indexs == misIndex?"hsabug":""}}'
+    wx:for="{{missionList}}" 
+    wx:key="missionList"
+    data-index="{{indexs}}"
+    wx:for-index="indexs"
+    bindtap='openMission'
+    >
+      <view class='missionContent'>
+        <view class='missionTitle'>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='missionDescription'>
+          <text>{{item.mainBody}}</text>
+        </view>
+        <view class='createTime'>
+          <text wx:if="{{item.done == 0}}">发布时间：{{item.publishTime}}</text>
+          <text wx:if="{{item.done == 1}}">发布时间：{{item.publishTime}}</text>
+          <text wx:if="{{item.done == 2}}">发布时间：{{item.publishTime}}</text>
+        </view>
+        <view class='createTime'>
+          <text wx:if="{{item.done == 0}}">截止时间：{{item.endTime}}  未接受</text>
+          <text wx:if="{{item.done == 1}}">截止时间：{{item.endTime}}  已接受</text>
+          <text wx:if="{{item.done == 2}}">截止时间：{{item.endTime}}  已完成</text>
+        </view>
+        <view class='exectorName' wx:if="{{item.endTime<=nowTime}}">
+          <text>执行人:{{item.exectorName}} 检查人：{{item.checkPerson}} <text style='color:red'>已逾期</text></text>
+        </view> 
+        <view class='exectorName' wx:else>
+          <text>执行人:{{item.exectorName}} 检查人：{{item.checkPerson}} <text>未逾期</text></text>
+        </view> 
+        
+
+      </view>
+  </view>
+</view>
+

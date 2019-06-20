@@ -1,0 +1,100 @@
+<view class='tabs'>
+  <view class='tab {{finish == 0?"active":""}}' data-current="0" bindtap='missionType'>
+    未接受({{unfinishMissionList.length}})
+  </view>
+  <view class='tab {{finish == 1?"active":""}}' data-current="1" bindtap='missionType'>
+    进行中({{acceptmissionList.length}})
+  </view>
+  <view class='tab {{finish == 2?"active":""}}'data-current="2" bindtap='missionType'>
+    已完成({{finishMission.length}})
+  </view>
+</view>
+<view class='show' wx:if="{{finish==0}}">
+  <view class='container' >
+    <view
+      class='content{{indexs == unMisIndex?"hsabug":""}}'
+      wx:for="{{unfinishMissionList}}" 
+      wx:key="unfinishMissionList"
+      data-index="{{indexs}}"
+      wx:for-index="indexs"
+      bindtap='openunfinishMission'
+      >
+        <view class='missionContent'>
+          <view class='missionTitle'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='missionDescription'>
+            <text>{{item.mainBody}}</text>
+          </view>
+          <view class='createTime'>
+            <text wx:if="{{item.done == 0}}">截止时间：{{item.endTime}}  未接受</text>
+            <text wx:if="{{item.done == 1}}">截止时间：{{item.endTime}}  已接受</text>
+            <text wx:if="{{item.done == 2}}">截止时间：{{item.endTime}}  已完成</text>
+          </view>
+          <view>
+            <text>执行人: {{item.exectorName}} 检查人：{{item.checkPerson}}</text>
+          </view>  
+        </view>
+    </view>
+  </view>
+</view>
+<view class='show' wx:if="{{finish==1}}">
+  <view class='container' >
+    <view
+     
+      class='content{{indexs == acceptMisIndex?"hsabug":""}}'
+      wx:for="{{acceptmissionList}}" 
+      wx:key="acceptmissionList"
+      data-index="{{indexs}}"
+      wx:for-index="indexs"
+      bindtap='openAcceptMission'
+      >
+        <view class='missionContent'>
+          <view class='missionTitle'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='missionDescription'>
+            <text>{{item.mainBody}}</text>
+          </view>
+          <view class='createTime'>
+            <text wx:if="{{item.done == 0}}">截止时间：{{item.endTime}}  未接受</text>
+            <text wx:if="{{item.done == 1}}">截止时间：{{item.endTime}}  已接受</text>
+            <text wx:if="{{item.done == 2}}">截止时间：{{item.endTime}}  已完成</text>
+          </view>
+          <view>
+            <text>执行人: {{item.exectorName}} 检查人：{{item.checkPerson}}</text>
+          </view>  
+        </view>
+    </view>
+  </view>
+</view>
+<view class='show' wx:if="{{finish==2}}">
+  <view class='container' >
+    <view
+      wx:if="{{finishMission != []}}"
+      class='content{{indexs == finishMisIndex?"hsabug":""}}'
+      wx:for="{{finishMission}}" 
+      wx:key="finishMission"
+      data-index="{{indexs}}"
+      wx:for-index="indexs"
+      bindtap='openFinishMission'
+      >
+        <view class='missionContent'>
+          <view class='missionTitle'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='missionDescription'>
+            <text>{{item.mainBody}}</text>
+          </view>
+          <view class='createTime'>
+            <text wx:if="{{item.done == 0}}">截止时间：{{item.endTime}}  未接受</text>
+            <text wx:if="{{item.done == 1}}">截止时间：{{item.endTime}}  已接受</text>
+            <text wx:if="{{item.done == 2}}">截止时间：{{item.endTime}}  已完成</text>
+          </view>
+          <view>
+            <text>执行人: {{item.exectorName}} 检查人：{{item.checkPerson}}</text>
+          </view>  
+        </view>
+    </view>
+  </view>
+</view>

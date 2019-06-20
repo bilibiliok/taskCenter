@@ -1,0 +1,64 @@
+/* pages/myMission/myMission.wxss */
+.container{
+  margin: 0;
+  padding: 0;
+ 
+}
+/*背景图片样式*/
+.container1{
+  position: fixed;
+  width:100%;
+  z-index: -9999
+}
+.title{ 
+  border-bottom:2px solid #E6e6e6;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20rpx
+}
+.title .dex{
+  float: left
+}
+.title text{
+  font-size: 30rpx;
+  margin-bottom:10rpx;
+  height: 100rpx;
+  line-height: 100rpx
+}
+#userinfo{
+  width: 100rpx;
+  height:100rpx;
+  border-radius:50%;
+  display: flex;
+  overflow:hidden;
+  text-align: center;
+  position: relative;
+  right: 52rpx
+}
+.userinfo-nickname {
+ font-size: 30rpx;
+ margin-right: 10rpx;
+ position: absolute;
+ right: 10rpx
+}
+.content{
+  display: inline-block;
+  margin-left: 10%;
+  margin-top:5%
+}
+.content text,.content1 text,.content2 text{
+  /* text-align: center;
+  margin-right:10%; */
+  font-size:30rpx
+}
+.content1{
+  float: right;
+  margin-right: 10%;
+  margin-top:5%;
+}
+.content2{
+  float: right;
+  margin-right: 15%;
+  margin-top:5%;
+}

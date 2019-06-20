@@ -1,0 +1,37 @@
+<!--pages/myMission/myMission.wxml-->
+<view class='container'>
+<!-- <image class='container1' mode='widthFix' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554741608232&di=08373aa7199191551f42027a6b63935c&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F0acea46ab6444a030a4f608d6b9727b9c3698f4b493d0-5pFj6y_fw236'></image> -->
+  <view class='title'>
+    <view style='margin-left:10%;width:50%'>
+      <image class='dex' src='../../images/mission.png' style='width:100rpx;height:100rpx'></image>
+      
+      <text>任务助手</text>
+    </view>
+    
+      <view class="logo">
+        <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
+        <open-data class="userinfo-nickname" type="userNickName" lang="zh_CN"></open-data>  
+      </view>
+
+
+        <!-- //获取用户头像直接显示在小程序中 -->
+    
+      <!-- //获取用户昵称直接显示在小程序中 -->
+  </view>
+  <view style='border-bottom:2px solid #e6e6e6;padding-bottom:5%'>
+    <view class='content' bindtap='myMissionUp'>
+      <image src='../../images/myMissionList.png' style='width:100rpx;height:100rpx'></image>
+      <view><text>我的任务</text></view> 
+    </view>
+    <view class='content1' bindtap='publish'>
+      <image src='../../images/myMissionList.png' style='width:100rpx;height:100rpx'></image>
+      <view><text>我的发布</text></view>
+    </view>
+    <!-- <view class='content2' bindtap='changeMymission'>
+      <image src='../../images/myMissionList.png' style='width:100rpx;height:100rpx'></image>
+      <view><text>修改任务</text></view>
+    </view> -->
+  </view>
+   <!-- <button bindtap='getOpenid'>测试</button> -->
+</view>
+
